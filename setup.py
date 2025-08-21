@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="plate-viz",
+    name="plateviz",
     version="0.1.0",
     description="Plate reader data visualization",
     author="Radium2000",
