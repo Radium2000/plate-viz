@@ -9,15 +9,12 @@ sns.set_style("ticks")
 sns.set_context("talk", font_scale=0.9, rc={"lines.linewidth": 2})
 plt.rcParams['font.family'] = 'Aller'
 
-import matplotlib_inline
-matplotlib_inline.backend_inline.set_matplotlib_formats('retina')
-
 import os
 theme_path = os.path.join(os.path.dirname(__file__), "Goldilocks.json")
 
 ctk.set_default_color_theme(theme_path)
 
-class GridPlotApp(ctk.CTk):
+class PlateApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         
@@ -96,5 +93,8 @@ class GridPlotApp(ctk.CTk):
         self.ax.scatter(x, 7-y, color='#57311a', s=100)
         self.canvas.draw()
 
-app = GridPlotApp()
+app = PlateApp()
 app.mainloop()
+
+VERSION = '0.1.0'
+AUTHOR = 'Rudra Kalra'
