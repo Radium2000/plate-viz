@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import customtkinter as ctk
+import importlib.resources as pkg_resources
 
 ctk.set_appearance_mode("light")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
@@ -8,8 +9,6 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 sns.set_style("ticks")
 sns.set_context("talk", font_scale=0.9, rc={"lines.linewidth": 2})
 plt.rcParams['font.family'] = 'Aller'
-
-import importlib.resources as pkg_resources
 
 def get_theme_path():
     paths = str(pkg_resources.files("plateviz") / "Goldilocks.json")
@@ -100,5 +99,5 @@ def plateDisplay():
     app = PlateApp()
     app.mainloop()
 
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 AUTHOR = 'Radium2000'
