@@ -9,10 +9,12 @@ sns.set_style("ticks")
 sns.set_context("talk", font_scale=0.9, rc={"lines.linewidth": 2})
 plt.rcParams['font.family'] = 'Aller'
 
-import os
-theme_path = os.path.join(os.path.dirname(__file__), "Goldilocks.json")
+import importlib.resources as pkg_resources
 
-ctk.set_default_color_theme(theme_path)
+def get_theme_path():
+    return str(pkg_resources.files("mylib") / "Goldilocks.json")
+
+ctk.set_default_color_theme(get_theme_path())
 
 class PlateApp(ctk.CTk):
     def __init__(self):

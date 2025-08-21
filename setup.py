@@ -8,5 +8,7 @@ setup(
     author_email="rudrakalra20@gmail.com",
     url="https://github.com/Radium2000/plate-viz",
     packages=find_packages(),
-    install_requires=["numpy", "matplotlib", "customtkinter", "seaborn"]
+    install_requires=["numpy", "matplotlib", "customtkinter", "seaborn"],
+    include_package_data=True,
+    package_data={"plateviz":["*.json"]},
 )
