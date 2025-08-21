@@ -93,8 +93,9 @@ class PlateApp(ctk.CTk):
         self.ax.scatter(x, 7-y, color='#57311a', s=100)
         self.canvas.draw()
 
-app = PlateApp()
-app.mainloop()
+def plateDisplay():
+    app = PlateApp()
+    app.mainloop()
 
 VERSION = '0.1.0'
 AUTHOR = 'Rudra Kalra'
