@@ -12,7 +12,7 @@ plt.rcParams['font.family'] = 'Aller'
 import importlib.resources as pkg_resources
 
 def get_theme_path():
-    return str(pkg_resources.files("mylib") / "Goldilocks.json")
+    return str(pkg_resources.files("plateviz") / "Goldilocks.json")
 
 ctk.set_default_color_theme(get_theme_path())
 
