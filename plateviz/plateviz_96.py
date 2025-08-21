@@ -101,4 +101,4 @@ def plateDisplay():
     app.mainloop()
 
 VERSION = '0.1.0'
-AUTHOR = 'Rudra Kalra'
+AUTHOR = 'Radium2000'
