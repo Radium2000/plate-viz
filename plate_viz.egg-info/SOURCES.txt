@@ -1,0 +1,8 @@
+setup.py
+plate_viz.egg-info/PKG-INFO
+plate_viz.egg-info/SOURCES.txt
+plate_viz.egg-info/dependency_links.txt
+plate_viz.egg-info/requires.txt
+plate_viz.egg-info/top_level.txt
+plateviz/__init__.py
+plateviz/plateviz_96.py
