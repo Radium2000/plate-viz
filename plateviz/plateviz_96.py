@@ -10,17 +10,20 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 sns.set_style("ticks")
 sns.set_context("talk", font_scale=0.9, rc={"lines.linewidth": 2})
 plt.rcParams['font.family'] = 'Aller'
-plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#335C67', '#982649', '#fb4b4e', '#3b3355'])
+plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#335C67', "#FFFFFF", '#fb4b4e', '#3b3355'])
 
 def get_theme_path():
-    paths = str(pkg_resources.files("plateviz") / "Goldilocks.json")
-    return paths
+    path = str(pkg_resources.files("plateviz") / "Goldilocks.json")
+    return path
 
 ctk.set_default_color_theme(get_theme_path())
 
 class PlateApp(ctk.CTk):
     def __init__(self, channels):
         super().__init__()
+        with pkg_resources.path("plateviz.resources", "pv_icon.ico") as icon_path:
+            self.iconbitmap(default=str(icon_path))
+
         self.channels = np.array(channels)
         
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
@@ -138,3 +141,5 @@ def plateDisplay(channels):
 
 VERSION = '1.1.2'
 AUTHOR = 'Radium2000'
+
+plateDisplay(['OD', 'Venus', 'Cerulean'])

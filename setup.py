@@ -10,5 +10,5 @@ setup(
     packages=find_packages(),
     install_requires=["numpy", "matplotlib", "customtkinter", "seaborn", "importlib.resources"],
     include_package_data=True,
-    package_data={"plateviz":["*.json"]},
+    package_data={"plateviz":["*.json", "resources/*"]},
 )
