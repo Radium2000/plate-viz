@@ -136,5 +136,5 @@ def plateDisplay(channels):
     app = PlateApp(channels=channels)
     app.mainloop()
 
-VERSION = '0.1.2'
+VERSION = '1.1.2'
 AUTHOR = 'Radium2000'
