@@ -16,18 +16,12 @@ def get_theme_path():
     path = str(pkg_resources.files("plateviz") / "Goldilocks.json")
     return path
 
-def get_icon_path():
-    path = str(pkg_resources.files("plateviz") / "pv_icon.ico")
-    return path
-
 ctk.set_default_color_theme(get_theme_path())
 
 class PlateApp(ctk.CTk):
     def __init__(self, channels):
         
         super().__init__()
-        
-        self.iconbitmap(default=get_icon_path())
 
         self.channels = np.array(channels)
         
