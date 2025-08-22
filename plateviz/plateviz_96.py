@@ -138,5 +138,3 @@ def plateDisplay(channels):
 
 VERSION = '0.1.1'
 AUTHOR = 'Radium2000'
-
-plateDisplay(['OD', 'Fl1', 'Fl2'])
